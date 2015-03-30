@@ -58,7 +58,8 @@ $(function() {
         labels: ['iPhone', 'iPad', 'iPod Touch'],
         pointSize: 2,
         hideHover: 'auto',
-        resize: true
+        resize: true,
+        lineColors: ['#2E79B9', '#58B957', '#F2AE43', '#DB524B']
     });
 
     Morris.Donut({
