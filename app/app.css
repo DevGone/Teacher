@@ -1,3 +1,16 @@
 .school-ranking p {
   font-size: 50px;
 }
+
+.progress-bar.vertical {
+  width: 100%;
+}
+
+.progress-bar.empty {
+  background-color: transparent;
+}
+
+.progress.vertical {
+  width: 20px;
+  height: 200px;
+}
