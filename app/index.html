@@ -29,9 +29,16 @@
 
     <!-- Custom CSS -->
     <link href="./bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- DataTables CSS -->
+    <link href="./bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="./bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -277,7 +284,16 @@
                             <a href="#/overview"><i class="fa fa-dashboard fa-fw"></i> Résumé</a>
                         </li>
                         <li>
-                            <a href="#/challenge"><i class="fa fa-trophy fa-fw"></i> Challenge</a>
+                            <a href="#"><i class="fa fa-trophy fa-fw"></i> Challenge<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#/challenge">Ma classe</a>
+                                </li>
+                                <li>
+                                    <a href="#/rankings">Classement complet</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#/lessons"><i class="fa fa-lightbulb-o fa-fw"></i> Ateliers</a>
@@ -332,6 +348,7 @@
     <script src="events/events.js"></script>
     <script src="mascot/mascot.js"></script>
     <script src="settings/settings.js"></script>
+    <script src="rankings/rankings.js"></script>
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>

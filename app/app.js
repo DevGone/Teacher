@@ -10,6 +10,7 @@ angular.module('teacher', [
   'teacher.events',
   'teacher.mascot',
   'teacher.settings',
+  'teacher.rankings',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
