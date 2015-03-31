@@ -12,7 +12,7 @@ angular.module('teacher.rankings', ['ngRoute'])
 .controller('RankingsCtrl', [function() {
 
   $('#dataTable-rankings').dataTable( {
-        "ajax": '../app/data/rankings.json',
+        "ajax": '/app/data/rankings.json',
         responsive: true
     } );
 
