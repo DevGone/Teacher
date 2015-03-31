@@ -12,7 +12,8 @@ angular.module('teacher.challenge', ['ngRoute'])
 .controller('ChallengeCtrl', [function() {
 
   $('#dataTable-challenge').dataTable( {
-        "ajax": '../app/data/challenge.json'
+        "ajax": '../app/data/challenge.json',
+        responsive: true
     } );
 
 }]);
