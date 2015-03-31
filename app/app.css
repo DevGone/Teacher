@@ -4,6 +4,7 @@
 
 .progress-bar.vertical {
   width: 100%;
+  background-color: #3C454F;
 }
 
 .progress-bar.empty {
@@ -11,6 +12,25 @@
 }
 
 .progress.vertical {
-  width: 20px;
+  width: 11px;
+  height: 128px;
+  position: relative;
+  left: 142px;
+  top: 15px;
+  background-color: white;
+  box-shadow: none;
+}
+
+.temperature-graph {
+  width: 200px;
   height: 200px;
+  background-image: url('./static/images/temperature.png');
+  background-size: contain;
+}
+
+.walter {
+  background-image: url('./static/images/walter_tuba.png');
+  background-size: contain;
+  width: 300px;
+  height: 300px;
 }
