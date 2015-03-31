@@ -5,6 +5,7 @@ angular.module('teacher', [
   'ngRoute',
   'ui.bootstrap',
   'teacher.overview',
+  'teacher.lessons',
   'teacher.challenge',
   'teacher.events',
   'teacher.mascot',
