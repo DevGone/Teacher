@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="teacher" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="student" class="no-js"> <!--<![endif]-->
 
 <head>
 
@@ -16,29 +16,29 @@
     <link rel="shortcut icon" type="image/png" href="static/images/walter_tuba.png"/>
 
     <!-- Bootstrap Core CSS -->
-    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../app/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="./bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="../app/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="./bower_components/startbootstrap-sb-admin-2/dist/css/timeline.css" rel="stylesheet">
+    <link href="../app/bower_components/startbootstrap-sb-admin-2/dist/css/timeline.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="./bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="../app/bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="./bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="./app.css" rel="stylesheet">
+    <link href="../app/bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="./student.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../app/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- DataTables CSS -->
-    <link href="./bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../app/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- DataTables Responsive CSS -->
-    <link href="./bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    <link href="../app/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -283,19 +283,7 @@
                             <a href="#/overview"><i class="fa fa-dashboard fa-fw"></i> Résumé</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-trophy fa-fw"></i> Challenge<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#/challenge">Ma classe</a>
-                                </li>
-                                <li>
-                                    <a href="#/rankings">Classement complet</a>
-                                </li>
-                                <li>
-                                    <a href="#/history">Historique</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
+                            <a href="#/consumption"><i class="fa fa-bolt fa-fw"></i> Consommation</a>
                         </li>
                         <li>
                             <a href="#/lessons"><i class="fa fa-lightbulb-o fa-fw"></i> Ateliers</a>
@@ -322,36 +310,36 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../app/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="../app/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="./static/js/helpers.js"></script>
+    <script src="../app/static/js/helpers.js"></script>
 
     <!-- In production use:
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
     -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-    <script src="app.js"></script>
+    <script src="../app/bower_components/angular/angular.js"></script>
+    <script src="../app/bower_components/angular-route/angular-route.js"></script>
+    <script src="../app/bower_components/angular-route/angular-route.js"></script>
+    <script src="../app/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="student.js"></script>
     <script src="overview/overview.js"></script>
-    <script src="challenge/challenge.js"></script>
     <script src="lessons/lessons.js"></script>
+    <script src="consumption/consumption.js"></script>
     <script src="events/events.js"></script>
     <script src="mascot/mascot.js"></script>
     <script src="settings/settings.js"></script>
     <script src="rankings/rankings.js"></script>
     <script src="history/history.js"></script>
-    <script src="components/version/version.js"></script>
-    <script src="components/version/version-directive.js"></script>
-    <script src="components/version/interpolate-filter.js"></script>
+    <script src="../app/components/version/version.js"></script>
+    <script src="../app/components/version/version-directive.js"></script>
+    <script src="../app/components/version/interpolate-filter.js"></script>
 
 </body>
 
