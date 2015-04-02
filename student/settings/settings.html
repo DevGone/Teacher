@@ -2,32 +2,97 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Paramètres</h1>
-            	<div class="row">
-                    <form role="form-horizontal">
-                        <fieldset>
-                            <div class="form-group">
-                            	<label for="exampleInputPassword1">Password</label>
-                                <input class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" name="password" type="password" value="">
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    Quel est le type de foyer ?    
-                                    <label style="margin-left:5px;" class="radio-inline">
-  										<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Appartement
-									</label>
-									<label class="radio-inline">
-  										<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Maison
-									</label>
-                                </label>
-                            </div>
-                            <!-- Change this to a button or input when using this as a form -->
-                            <a href="/app/" class="btn btn-lg btn-primary btn-block">Se connecter</a>
-                        </fieldset>
-                    </form> 	 
-            	</div>
+            <div class="well">
+                <p>Demande à tes parents de l'aide pour remplir le formulaire ci-dessous. Tu en auras besoin pour pouvoir participer au challenge. En effet, celui-ci va nous permettre de calculer une moyenne juste de ta consommation en fonction des particularités de ton foyer. Comme ça, tout le monde est à égalité pour faire le challenge!</p>
+            </div>
         </div>
         <!-- /.col-lg-12 -->
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="tbPersonNumber" class="col-sm-4 control-label">Combien de personne dans le foyer ?</label>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" id="tbPersonNumber" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tbSize" class="col-sm-4 control-label">Quelle est la superficie du foyer en m² ?</label>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" id="tbSize" placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rbHomeType" class="col-sm-4 control-label">Quel est le type de foyer ? </label>
+                <div class="col-sm-8">   
+                    <label class="radio-inline">
+                        <input type="radio" name="rbHomeType" id="rbHomeType1" value="1"> Appartement
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="rbHomeType" id="rbHomeType2" value="2"> Maison
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cbTypeHeater" class="col-sm-4 control-label">Quel est le type de chauffage ? </label> 
+                <div class="col-sm-8"> 
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="cbTypeHeater" id="cbTypeHeater1" value="1"> Elèctrique
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="cbTypeHeater" id="cbTypeHeater2" value="2"> Gaz
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="cbTypeHeater" id="cbTypeHeater3" value="3"> Fuel
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="cbTypeHeater" id="cbTypeHeater4" value="4"> Au sol
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="cbTypeHeater" id="cbTypeHeater5" value="5"> Bois
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rbCollectifHeater" class="col-sm-4 control-label">Chauffage collectif ? </label>
+                <div class="col-sm-8">   
+                    <label class="radio-inline">
+                        <input type="radio" name="rbCollectifHeater" id="rbCollectifHeater1" value="1"> Oui
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="rbCollectifHeater" id="rbCollectifHeater2" value="2"> Non
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cbPresentObject" class="col-sm-4 control-label">Quels objets sont présents dans votre foyer ? </label> 
+                <div class="col-sm-8"> 
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="cbPresentObject1" value="1"> Machine à laver
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="cbPresentObject2" value="2"> Lave vaisselle
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="cbPresentObject3" value="3"> Voiture élèctrique
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="cbPresentObject4" value="4"> Four
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="cbPresentObject5" value="5"> Réfrégirateur
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="cbPresentObject6" value="6"> Congélateur
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><button type="submit" class="btn btn-primary">Enregistrer</button></div>
+            </div>
+        </form>
     </div>
     <!-- /.row -->
+
 </div>
 <!-- /#page-wrapper -->

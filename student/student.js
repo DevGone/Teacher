@@ -10,8 +10,7 @@ angular.module('student', [
   'student.events',
   'student.mascot',
   'student.settings',
-  'student.rankings',
-  'student.history',
+  'student.rewards',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
