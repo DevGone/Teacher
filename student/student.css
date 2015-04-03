@@ -1,0 +1,37 @@
+.school-ranking p {
+  font-size: 50px;
+}
+
+.progress-bar.vertical {
+  width: 100%;
+  background-color: #3C454F;
+}
+
+.progress-bar.empty {
+  background-color: transparent;
+}
+
+.progress.vertical {
+  width: 11px;
+  height: 128px;
+  position: relative;
+  left: 142px;
+  top: 15px;
+  background-color: white;
+  box-shadow: none;
+}
+
+.temperature-graph {
+  width: 200px;
+  height: 200px;
+  background-image: url('../app/static/images/temperature.png');
+  background-size: contain;
+}
+
+.walter {
+  background: url('../app/static/images/walter_tuba.png') center;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+}

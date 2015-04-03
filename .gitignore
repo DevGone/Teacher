@@ -1,10 +1,11 @@
 logs/*
+gs/*
 !.gitkeep
 node_modules/
 bower_components/
-app/bower_components/
 tmp
 .DS_Store
 .idea
 
+# Sublime text
 *.sublime-*
