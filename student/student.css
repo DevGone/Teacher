@@ -95,3 +95,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.cercle{
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  margin:10px;
+}
