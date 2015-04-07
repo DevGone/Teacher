@@ -9,6 +9,14 @@ angular.module('student.lessons', ['ngRoute'])
   });
 }])
 
-.controller('LessonsCtrl', [function() {
+.controller('LessonsCtrl', ['$scope', function($scope) {
+
+	$scope.optionsAtelier = [
+        { label: "Découverte de l'énergie", value: 1 }
+    ];
+
+    $scope.downloadAtelier = function(atelier) {
+    	$scope.newAtelier = false;
+    }
 
 }]);

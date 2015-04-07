@@ -5,6 +5,118 @@
         </div>
         <!-- /.col-lg-12 -->
     </div>
+    <div class="row"> 
+    	<div class="col-lg-12">
+    		<button type="button" ng-init="showNewStudent=false" ng-click="showNewStudent = !showNewStudent" class="btn btn-default" id="addStudentBtn">Ajouter un élève</button>
+    		<button type="button" ng-click="addGroupEvent()" class="btn btn-default" id="addGroupBtn">Ajouter un groupe</button>
+    	</div>
+    	<div class="col-lg-12" style="margin: 20px;">
+		    <div ng-show="showNewStudent" id="dialogStudent" title="Ajout d'un élève">
+		        <form class="form-horizontal">
+		            <div class="form-group">
+		                <label for="tbStudentName" class="col-sm-4 control-label">Nom Prénom : </label>
+		                <div class="col-sm-4">
+		                    <input class="form-control" id="tbStudentName" placeholder="" ng-model="user.name">
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <label for="tbStudentName" class="col-sm-4 control-label">ID du Raspberric : </label>
+		                <div class="col-sm-4">
+		                    <input class="form-control" id="tbStudentName" placeholder="">
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <label for="tbStudentName" class="col-sm-4 control-label">Choisir un groupe : </label>
+		                <div class="col-sm-4">
+						<select class="form-control" ng-model="user.group" ng-options="opt as opt.label for opt in optionsGroup">
+            			</select>
+		                </div>
+		                <div class="col-sm-4">
+		                    <button type="button" ng-click="addStudent(user)" class="btn btn-primary" id="newStudentBtn">Ajouter</button>
+		                    <button type="button" ng-click="showNewStudent = !showNewStudent" class="btn btn-default" id="newStudentBtn">Fermer</button>
+		                </div>
+		            </div>
+		        </form>
+			</div>
+		</div>
+        <div class="col-lg-12">
+        	<label style="margin:10px;">Répartition des élèves dans les groupes :</label>
+       	</div>
+       	<div class="col-lg-12">
+       		<div class="row">
+       			<div class="col-lg-6">
+	       		    <div class="panel panel-primary">
+	                	<div class="panel-heading">
+	                	Groupe 1
+	                	</div>	                
+		                <div class="panel-body">
+			                <ul id="ulGroup1" class="sortableUL">
+							  <li class="ui-state-default">Mario</li>
+							  <li class="ui-state-default">Zelda</li>
+							  <li class="ui-state-default">Kirby</li>
+							  <li class="ui-state-default">Donkey Kong</li>
+							  <li class="ui-state-default">Metroid</li>
+							</ul>
+		                </div>
+	                </div>
+	            </div>
+	        	<div class="col-lg-6">
+	       		    <div class="panel panel-green">
+	                	<div class="panel-heading">
+	                	Groupe 2
+	                	</div>	                
+		                <div class="panel-body">
+			                <ul id="ulGroup2" class="sortableUL">
+							  <li class="ui-state-default">Hercule</li>
+							  <li class="ui-state-default">Ulysse</li>
+							  <li class="ui-state-default">Achille</li>
+							  <li class="ui-state-default">Ajax</li>
+							  <li class="ui-state-default">Persée</li>
+							</ul>
+		                </div>
+	                </div>
+	            </div>
+	            <div class="col-lg-6">
+	       		    <div class="panel panel-yellow">
+	                	<div class="panel-heading">
+	                	Groupe 3
+	                	</div>	                
+		                <div class="panel-body">
+			                <ul id="ulGroup3" class="sortableUL">
+							  <li class="ui-state-default">Superman</li>
+							  <li class="ui-state-default">Catwoman</li>
+							  <li class="ui-state-default">Batman</li>
+							  <li class="ui-state-default">Flash</li>
+							  <li class="ui-state-default">Archer Vert</li>
+							</ul>
+		                </div>
+	                </div>
+	            </div>
+	            <div class="col-lg-6">
+	       		    <div class="panel panel-red">
+	                	<div class="panel-heading">
+	                	Groupe 4
+	                	</div>	                
+		                <div class="panel-body">
+			                <ul id="ulGroup4" class="sortableUL">
+							  <li class="ui-state-default">Carapuce</li>
+							  <li class="ui-state-default">Pikachu</li>
+							  <li class="ui-state-default">Salamèche</li>
+							  <li class="ui-state-default">Dracofeu</li>
+							  <li class="ui-state-default">Bulbizar</li>
+							</ul>
+		                </div>
+	                </div>
+	            </div>
+	            <div id="newGroupDiv">
+	            </div>
+       		</div>
+		</div>
+    </div>
     <!-- /.row -->
 </div>
 <!-- /#page-wrapper -->
+
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="./bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css">
