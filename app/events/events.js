@@ -23,6 +23,5 @@ angular.module('teacher.events', ['ngRoute'])
     socketManager.setColor(socketManager.challengeColor());
   }
 
-
 }]);
 

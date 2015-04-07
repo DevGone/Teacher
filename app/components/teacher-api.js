@@ -86,7 +86,7 @@ angular.module('teacher.api', [])
   // Return public API
   return ({
     setColor: setColor,
-    yellowColor: yellowColor,
+    greenColor: greenColor,
     challengeColor: challengeColor
   });
 
@@ -111,11 +111,11 @@ angular.module('teacher.api', [])
   //   console.log(data);
   // });
 
-  function yellowColor () {
+  function greenColor () {
     return  {
-      red: 255,
-      green: 246,
-      blue: 26
+      red: 0,
+      green: 255,
+      blue: 0
     };
   };
 

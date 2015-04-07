@@ -21,9 +21,9 @@ angular.module('teacher.mascot', ['ngRoute'])
 
   $scope.success = false;
 
-  $scope.sendYellowEvent = function() {
+  $scope.sendElectricityEvent = function() {
     apiManager.setActiveEvent(0);
-    socketManager.setColor(socketManager.yellowColor());
+    socketManager.setColor(socketManager.greenColor());
     $scope.success = true;
   };
 
