@@ -9,7 +9,7 @@ angular.module('teacher.events', ['ngRoute'])
   });
 }])
 
-.controller('EventsCtrl', ['$scope', '$http', 'apiManager', function($scope, $http, apiManager) {
+.controller('EventsCtrl', ['$scope', '$http', 'apiManager', 'socketManager', function ($scope, $http, apiManager, socketManager) {
 
   $scope.activeEvent = null;
 
@@ -20,6 +20,7 @@ angular.module('teacher.events', ['ngRoute'])
   $scope.terminateEvent = function() {
     $scope.activeEvent = null;
     apiManager.setActiveEvent(-1);
+    socketManager.setColor(socketManager.challengeColor());
   }
 
 

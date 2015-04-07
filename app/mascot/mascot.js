@@ -9,11 +9,7 @@ angular.module('teacher.mascot', ['ngRoute'])
   });
 }])
 
-.controller('MascotCtrl', ["$scope", function ($scope) {
-
-  var socket = io('http://devgone.herokuapp.com');
-
-  socket.emit('identification', { device: 'teacher'});
+.controller('MascotCtrl', ['$scope', 'socketManager', 'apiManager', function ($scope, socketManager, apiManager) {
 
 // For debug only
   // var walter = io('http://devgone.herokuapp.com');
@@ -23,28 +19,18 @@ angular.module('teacher.mascot', ['ngRoute'])
   //   console.log(data);
   // });
 
-  var yellowColor = {
-    red: 255,
-    green: 246,
-    blue: 26
-  };
-
-  var challengerColor = {
-    red: 70,
-    green: 70,
-    blue: 255
-  };
-
-  var setColor = function (color) {
-    socket.emit('setColor', color);
-  };
+  $scope.success = false;
 
   $scope.sendYellowEvent = function() {
-    setColor(yellowColor);
+    apiManager.setActiveEvent(0);
+    socketManager.setColor(socketManager.yellowColor());
+    $scope.success = true;
   };
 
   $scope.resetColor = function () {
-    setColor(challengerColor);
+    apiManager.setActiveEvent(-1);
+    socketManager.setColor(socketManager.challengeColor());
+    $scope.success = false;
   };
 
 }]);

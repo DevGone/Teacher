@@ -18,7 +18,7 @@ angular.module('teacher.api', [])
 
     var request = $http({
       method: 'get',
-      url: 'http://localhost:3000/events/',
+      url: 'https://devgone.herokuapp.com/events/',
       params: {},
       data: {}
     });
@@ -30,7 +30,7 @@ angular.module('teacher.api', [])
 
     var request = $http({
       method: 'post',
-      url: 'http://localhost:3000/events/',
+      url: 'https://devgone.herokuapp.com/events/',
       headers: { 'Content-Type': 'application/json' },
       params: {
         event: eventId
@@ -76,4 +76,54 @@ angular.module('teacher.api', [])
 
   }
 
+})
+
+.service('socketManager', function() {
+
+  var socket = io('https://devgone.herokuapp.com');
+  socket.emit('identification', { device: 'teacher'});
+
+  // Return public API
+  return ({
+    setColor: setColor,
+    yellowColor: yellowColor,
+    challengeColor: challengeColor
+  });
+
+  // ---
+  //  PUBLIC METHODS
+  // ---
+
+
+  function setColor (color) {
+    socket.emit('setColor', color);
+  };
+
+  // ---
+  // PRIVATE METHODS.
+  // ---
+
+// For debug only
+  // var walter = io('http://devgone.herokuapp.com');
+  // walter.emit('identification', { device: 'walter'});
+  // walter.on('setColor', function(data) {
+  //   console.log('Color set to: ');
+  //   console.log(data);
+  // });
+
+  function yellowColor () {
+    return  {
+      red: 255,
+      green: 246,
+      blue: 26
+    };
+  };
+
+  function challengeColor () {
+    return {
+      red: 70,
+      green: 70,
+      blue: 255
+    }
+  };
 });
