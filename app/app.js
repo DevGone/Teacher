@@ -12,6 +12,7 @@ angular.module('teacher', [
   'teacher.settings',
   'teacher.rankings',
   'teacher.history',
+  'teacher.api',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
