@@ -2,10 +2,30 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Ateliers</h1>
-            <p>Revoir mes ateliers</p>
-            <p>Gagner des points</p>
         </div>
         <!-- /.col-lg-12 -->
+        
+        <div class="col-lg-12">
+        	<div class="col-lg-12">
+	            <button type="button" style="margin:10px;" ng-click="newAtelier = !newAtelier" ng-init="newAtelier=false" ng-show="!newAtelier" class="btn btn-default" >Revoir mes ateliers</button>
+			    <div class="col-lg-4" ng-show="newAtelier">
+		            <select class="form-control" ng-model="atelier" ng-options="opt as opt.label for opt in optionsAtelier">
+		            </select>
+		        </div>
+		        <form method="get" action="static/files/energie.pptx">
+		            <button type="submit" ng-show="newAtelier" ng-click="downloadAtelier(atelier)" class="btn btn-primary">Télécharger</button>
+		            <button type="button" ng-show="newAtelier" ng-click="newAtelier = !newAtelier" class="btn btn-default">Annuler</button>
+	            </form>
+	        </div>
+	        <div class="col-lg-12">
+	        	<button type="button" style="margin:10px;" ng-click="" class="btn btn-default">Gagner des points</button>
+	        </div>
+        </div>
+        <div class="col-lg-12" ng-show="!showBegin">
+        	<div id="atelierName" style="font-size: 20px"></div>
+        	<div id="nbConnectedTab" style="font-size: 20px"></div>
+        	<button type="button" ng-click="showBegin = !showBegin" class="btn btn-success" style="margin-top: 20px;">Terminer</button>
+        </div>
     </div>
     <!-- /.row -->
 </div>
