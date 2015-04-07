@@ -19,7 +19,8 @@ angular.module('teacher.mascot', ['ngRoute'])
   // var walter = io('http://devgone.herokuapp.com');
   // walter.emit('identification', { device: 'walter'});
   // walter.on('setColor', function(data) {
-  //   console.log('Color set to: ' + data);
+  //   console.log('Color set to: ');
+  //   console.log(data);
   // });
 
   var yellowColor = {
